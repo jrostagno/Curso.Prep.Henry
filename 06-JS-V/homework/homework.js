@@ -27,7 +27,24 @@ function crearUsuario() {
 
   return Usuario;
 
+   //    FORMA 
+
+        //         Class Usuario {
+
+          //      constructor (opciones){
+
+            //          this.usuario=opciones.usuario;
+            //          this.nombre=opciones.nombre;
+            //          this.email=opciones.email;
+            //          this.password=opciones.password;
+
+              //         }
+
+                //      saludar(){
+                  //    return "Hola, mi nombre es "+ this.nombre;
 }
+
+
 
 function agregarMetodoPrototype(Constructor) {
   // Agrega un método al Constructor del `prototype`
@@ -54,7 +71,7 @@ function agregarStringInvertida() {
 
     for(let i=this.length-1; i>=0; i--){
 
-      acumulacion+=this.charAt(i);
+      acumulacion+=this.charAt(i);    // this hace referencia a la palabra que es instancia de String,
 
     }
 
@@ -81,21 +98,22 @@ function agregarStringInvertida() {
       this.apellido= apellido;
       this.edad= edad;
       this.domicilio= domicilio;
+    }
 
-      this.detalle= function (){
+      detalle () {
 
         return {
-        Nombre: this.nombre,
-        Apellido: this.apellido,
-        Edad: this.edad,
-        Domicilio: this.domicilio
+        nombre: this.nombre,
+        apellido: this.apellido,
+        edad: this.edad,
+        domicilio: this.domicilio
 
         }
 
 
       }
 
-    }
+    
 }
 
 function crearInstanciaPersona(nombre, apellido, edad, dir) {
